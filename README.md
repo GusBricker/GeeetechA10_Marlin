@@ -1,4 +1,4 @@
-# Geeetech A10 Marlin 1.1.8 with BLTouch
+# Geeetech A10 Marlin 1.1.8 with BLTouch (2020 version)
 
 This is the stock standard Geeetech A10 1.1.8 firmware from their Github [here](https://github.com/Geeetech3D/Prusa_I3_3Dprinter/tree/master/A10_marlin1.1.8_3DTtouch/Marlin).
 
@@ -7,8 +7,8 @@ The following items have been changed:
 ##### Configuration.h 
 - FAN_SOFT_PWM: Part cooler fan wont run at less then 100% duty cycle unless this is enabled.
 - Z_PROBE_OFFSET_FROM_EXTRUDER: Specific to my BL Touch location
-- DEFAULT_XJERK: from 20-10 because it improved print quality
-- DEFAULT_YJERK: from 20-10 because it improved print quality
+- DEFAULT_XJERK: from 20->10 because it improved print quality
+- DEFAULT_YJERK: from 20->10 because it improved print quality
 
 ##### Configuration_adv.h 
 - THERMAL_PROTECTION_HYSTERESIS: from 4->10 because I installed [this](https://www.thingiverse.com/thing:4319230) cooler which was cooling the bed too much and causing thermal runaway error to trigger incorrectly.
