@@ -9,9 +9,18 @@ The following items have been changed:
 - Z_PROBE_OFFSET_FROM_EXTRUDER: Specific to my BL Touch location
 - DEFAULT_XJERK: from 20->10 because it improved print quality
 - DEFAULT_YJERK: from 20->10 because it improved print quality
+- FILAMENT_RUNOUT_SENSOR: Enabled to make Filament runout sensor work
+- uncommented `#define FILAMENT_RUNOUT_SENSOR` to enable built in filament runout sensor. This should be enough if printing from sd card, but if using OctoPrint you will need Action Commands plugin and to make futher changes listed in Configuration_adv.h below.
 
 ##### Configuration_adv.h 
 - THERMAL_PROTECTION_HYSTERESIS: from 4->10 because I installed [this](https://www.thingiverse.com/thing:4319230) cooler which was cooling the bed too much and causing thermal runaway error to trigger incorrectly.
+- uncommented `#define ACTION_ON_PAUSE "pause"`
+- uncommented `#define ACTION_ON_RESUME "resume"`
+- uncommented `#define PARK_HEAD_ON_PAUSE`: Wont send action:pause correctly to OctoPrint without this uncommented.
+
+### Filament Runout  & OctoPrint
+
+Action Commands plugin must be installed for Filament Runout to work with action:pause that Marlin will send when the filament runs out. I also observed a bug in that the filament runout sensor will only ever trigger once during a print, this means if you went thru more then two spools you might not detect runout of the second spool.
 
 ## License
 
