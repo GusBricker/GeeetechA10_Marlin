@@ -1,6 +1,6 @@
 # Geeetech A10 Marlin 1.1.8 with BLTouch (2020 version)
 
-This is the stock standard Geeetech A10 1.1.8 firmware from their Github [here](https://github.com/Geeetech3D/Prusa_I3_3Dprinter/tree/master/A10_marlin1.1.8_3DTtouch/Marlin).
+This is the stock standard Geeetech A10 1.1.8 firmware from their Github [here](https://github.com/Geeetech3D/Prusa_I3_3Dprinter/tree/master/A10_marlin1.1.8_3DTtouch/Marlin) running BigTreeTech S42B steppers on the X & Y axis. I have since removed these steppers as I found they caused issues with print accuracy that the original steppers didnt have. I would not recommend anyone purchases these motors as the [source code](https://github.com/bigtreetech/BIGTREETECH-S42B-V1.0) is _very_ messy (making fixing bugs almost impossible) and the circuit diagram/pcb layout are not open source. If you are desperate for a closed loop NEMA 17, look at the [Maker Base MKS-SERVO42B](https://github.com/makerbase-mks/MKS-SERVO42B) instead (I have not tried it, but the source code is readable and circuit diagrams are available).
 
 The following items have been changed:
 
