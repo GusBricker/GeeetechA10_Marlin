@@ -1,3 +1,23 @@
+# Geeetech A10 Marlin 2.0.x (2020 version)
+
+This branch has been forked directly from Marlin 2.0.x branch, with the only changes existing between `Configuration.h` and `Configuration_adv.h`.
+
+The firmware is configured for a printer with the following modifications:
+- BLTouch
+- TMC2209 on X,Y,Z (wired in legacy mode - aka dropped into the GT2560v4 board)
+- BMG Clone Extruder
+
+Other nice things:
+- Software PWM has been enabled for the cooling fan so it can work between 0-100% (mine seems to start to spin above 40%)
+- Action commands enabled for nice Octoprint integration
+- Filament runout sensor enabled
+- Z Offset setup wizard in this version of Marlin is *amazing*
+- Linear advance has been setup for Capricorn Bowden setup
+- Z safe homing enabled to prevent BLTouch damage
+- Slightly reduced X bed size (220mm->214mm) to prevent print head connector crashing into frame
+- Slightly reduced Z height (260mm->250mm) to prevent wires and bowden tube getting crushed by top of frame
+- Also added helper script for programming GT2560v4 board on Mac OS because I find programming often fails mid write via Arduino Studio which causes the entire environment to crash. Once it has crashed, Arduino Studio has to recompile the entire project from scratch adding signifigant time to test changes.
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
